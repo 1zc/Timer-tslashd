@@ -20,9 +20,10 @@ public partial class SurfTimer
             return;
 
         if (CurrentMap.Stages > 0)
-            player.PrintToChat($"{PluginPrefix} {CurrentMap.Name} - {ChatColors.Green}Tier {CurrentMap.Tier}{ChatColors.Default} - Staged {ChatColors.Yellow}{CurrentMap.Stages} Stages{ChatColors.Default}");
+            player.PrintToChat($"{pluginCfg.Config.Prefix} {CurrentMap.Name} - {ChatColors.Green}Tier {CurrentMap.Tier}{ChatColors.Default} - Staged {ChatColors.Yellow}{CurrentMap.Stages} Stages{ChatColors.Default}");
         else
-            player.PrintToChat($"{PluginPrefix} {CurrentMap.Name} - {ChatColors.Green}Tier {CurrentMap.Tier}{ChatColors.Default} - Linear {ChatColors.Yellow}{CurrentMap.Checkpoints} Checkpoints{ChatColors.Default}");
+            player.PrintToChat($"{pluginCfg.Config.Prefix} {CurrentMap.Name} - {ChatColors.Green}Tier {CurrentMap.Tier}{ChatColors.Default} - Linear {ChatColors.Yellow}{CurrentMap.Checkpoints} Checkpoints{ChatColors.Default}");
+
         return;
     }
 
