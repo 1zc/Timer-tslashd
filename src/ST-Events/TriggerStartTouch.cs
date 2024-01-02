@@ -138,7 +138,7 @@ public partial class SurfTimer
                         #endif
 
                         // Print checkpoint message
-                        player.HUD.DisplayCheckpointMessages(PluginPrefix);
+                        player.HUD.DisplayCheckpointMessages(pluginCfg.Config.Prefix);
 
                         // store the checkpoint in the player's current run checkpoints used for Checkpoint functionality
                         PersonalBest.CheckpointObject cp2 = new PersonalBest.CheckpointObject(stage,
@@ -175,7 +175,7 @@ public partial class SurfTimer
                         #endif
                         
                         // Print checkpoint message
-                        player.HUD.DisplayCheckpointMessages(PluginPrefix);
+                        player.HUD.DisplayCheckpointMessages(pluginCfg.Config.Prefix);
 
                         // store the checkpoint in the player's current run checkpoints used for Checkpoint functionality
                         PersonalBest.CheckpointObject cp2 = new PersonalBest.CheckpointObject(checkpoint,

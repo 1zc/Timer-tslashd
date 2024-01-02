@@ -17,6 +17,7 @@ internal class TimerDatabase
 
     public TimerDatabase(DBCfg cfg)
     {
+        Console.WriteLine($"CS2 Surf DEBUG >> TimerDatabase -> {cfg.Host} / {cfg.User} / {cfg.Password} / {cfg.Database} / {cfg.Port} / {cfg.Timeout}");
         this._connString = $"server={cfg.Host};user={cfg.User};password={cfg.Password};database={cfg.Database};port={cfg.Port};connect timeout={cfg.Timeout};";
         this._db = new MySqlConnection(this._connString);
         this._db.Open();

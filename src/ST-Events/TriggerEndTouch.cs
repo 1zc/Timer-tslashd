@@ -51,7 +51,7 @@ public partial class SurfTimer
                     if (velocity > 666.0)
                     {
                         player.Controller.PrintToChat(
-                            $"{PluginPrefix} {ChatColors.Red}You are going too fast! ({velocity.ToString("0")} u/s)");
+                            $"{pluginCfg.Config.Prefix} {ChatColors.Red}You are going too fast! ({velocity.ToString("0")} u/s)");
                         player.Timer.Reset();
                         if (CurrentMap.StartZone != new Vector(0,0,0))
                             Server.NextFrame(() => player.Controller.PlayerPawn.Value!.Teleport(CurrentMap.StartZone, new QAngle(0,0,0), new Vector(0,0,0)));
